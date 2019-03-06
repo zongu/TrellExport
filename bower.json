@@ -1,0 +1,42 @@
+{
+  "name": "trellexport",
+  "description": "",
+  "main": "index.js",
+  "authors": [
+    "Carter <zongu3317@gmail.com>"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/zongu/TrellExport",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "2.2.3",
+    "bootstrap": "3.3.7",
+    "font-awesome": "4.5.0",
+    "angular": "1.5.8",
+    "signalr": "2.2.1",
+    "angular-signalr-hub": "1.6.2",
+    "angular-deferred-bootstrap": "0.1.9",
+    "angular-ui-router": "0.2.18",
+    "angular-breadcrumb": "0.4.1",
+    "angular-sanitize": "1.5.5",
+    "angular-resource": "1.5.5",
+    "ui-select": "angular-ui-select#0.16.1",
+    "angular-bootstrap": "1.3.2",
+    "angular-bootstrap-switch": "0.5.0",
+    "angular-daterangepicker": "0.2.2",
+    "angular-cron-jobs": "3.2.0",
+    "ng-notify": "0.7.2",
+    "ngprogress": "1.1.3",
+    "angular-file-upload": "2.2.0",
+    "alasql": "^0.4.11",
+    "angular-ui-tinymce": "0.0.19",
+    "angular-signature": "1.0.3",
+    "Chart.js": "chartjs#1.0.2"
+  }
+}

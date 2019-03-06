@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TrellExport</title>
+    <link href="site.min.css" rel="stylesheet" />
+</head>
+
+<body class="flat-blue">
+    <div id="pageloader">
+        <div class="loading">
+            <div class="progress progress-striped active">
+                <div class="progress-bar" style="width: 100%;"></div>
+            </div>
+            <p>Loading, please wait...</p>
+        </div>
+
+        <div class="error">
+            <div class="alert alert-danger">
+                <p>Sorry, could not connect to the server.</p>
+            </div>
+            <button class="btn btn-success" onclick="location.href = '/';">Try again...</button>
+        </div>
+    </div>
+    <div id="maincontainer" class="app-container hidden">
+        <div class="row content-container">
+            <div class="container-fluid">
+                <div class="side-body padding-top" ng-cloak>
+                    <div ui-view></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="site.min.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            $(".navbar-expand-toggle").click(function () {
+                $(".app-container").toggleClass("expanded");
+                $(".navbar-expand-toggle").toggleClass("fa-rotate-90");
+            });
+            $(".navbar-right-expand-toggle").click(function () {
+                $(".navbar-right").toggleClass("expanded");
+                $(".navbar-right-expand-toggle").toggleClass("fa-rotate-90");
+            });
+            $(".side-menu .nav .dropdown").on('show.bs.collapse', function () {
+                $(".side-menu .nav .dropdown .collapse").collapse('hide');
+            });
+            $(".app-container").toggleClass("expanded");
+            $(".navbar-expand-toggle").toggleClass("fa-rotate-90");
+        });
+    </script>
+</body>
+
+</html>
