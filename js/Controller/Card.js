@@ -99,7 +99,7 @@
                     "overflow": "auto",
                     "min-width": contentWidth + "px"
                 }
-                
+
                 for (let data of vm.DataList) {
                     let customFieldSvc = $resource("https://api.trello.com/1/boards/" + data.idBoard + "/customFields", null);
                     let cardSvc = $resource("https://api.trello.com/1/lists/" + data.id + "/cards", null);
@@ -207,9 +207,9 @@
                     Comment: card.ExportMemo,
                     Members: card.Members,
                     ProgessRate: card.CustomItems.ProgessRate ? card.CustomItems.ProgessRate : "",
-                    PreparedFormally: card.CustomItems.PreparedFormally ? card.CustomItems.PreparedFormally.format() : "",
-                    DueDate: card.badges.due && card.badges.due !== "" ? moment(card.badges.due).format() : "",
-                    BegainDate: card.CustomItems.BegainDate ? card.CustomItems.BegainDate.format() : ""
+                    PreparedFormally: card.CustomItems.PreparedFormally ? card.CustomItems.PreparedFormally.format("YYYY-MM-DD") : "",
+                    DueDate: card.badges.due && card.badges.due !== "" ? moment(card.badges.due).format("YYYY-MM-DD") : "",
+                    BegainDate: card.CustomItems.BegainDate ? card.CustomItems.BegainDate.format("YYYY-MM-DD") : ""
                 })
             }
             
