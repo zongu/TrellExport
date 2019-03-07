@@ -1,3 +1,4 @@
 /node_modules/*
 /bower_components/*
-/site.min.*
+/site.min.css
+/site.min.js
